@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'hstyle.css' %}"/>
+    <title>Home</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const uploadForm = document.querySelector('#form');
+            const fileInput = document.querySelector('#input');
+
+            uploadForm.addEventListener('submit', function (e) {
+                if (!fileInput.files.length) {
+                    e.preventDefault();
+                    alert('Please select a file before submitting.');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a class="nav_logo">Filezz</a>
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="/" class="nav_link">Home</a>
+                    <a href="about" class="nav_link">About</a>
+                    <a href="contact" class="nav_link">Contact</a>
+                    <a href="myfiles" class="nav_link">Files</a>
+                </li>
+            </ul>
+            <button class="button"><a href="logout">Logout</a></button>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="form_container">
+            <div class="form">
+                <form action="/" id="form" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h2>Upload the File</h2>
+                    {% for message in messages %}
+                        {{message}}
+                    {% endfor %}
+                    <br>
+                    <div class="input_box">
+                        <input type="file" id="input" name="file" placeholder="Upload the File" required>
+                    </div>
+                    <br>
+                    <button class="button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

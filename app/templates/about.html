@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'hstyle.css' %}">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a class="nav_logo">Filezz</a>
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="/" class="nav_link">Home</a>
+                    <a href="contact" class="nav_link">Contact</a>
+                    <a href="myfiles" class="nav_link">Files</a>
+                </li>
+            </ul>
+            <button class="button"><a href="logout">Logout</a></button>
+        </nav>
+    </header>
+    <section class="about">
+        <h3 id="head">About Page</h3>
+        <div class="about">
+            <h3>Welcome to Filezz, your trusted and secure platform for file uploads. We understand the importance of privacy and confidentiality when it comes to your data. Our mission is to provide you with a seamless and reliable file uploading experience while ensuring that your files remain private and are not shared with anyone.</h3>
+            <br>
+            <h3>At Filezz, we prioritize the security of your data above all else. We employ state-of-the-art encryption and security measures to protect your files from unauthorized access. Whether you're uploading personal documents, sensitive business files, or creative projects, you can trust us to keep your data safe.</h3>
+            <br>
+            <h3>Our user-friendly interface makes it easy for you to upload files of various types and sizes. We also offer features such as password protection and expiration dates for added security and control over your uploads. Rest assured, your files are in good hands.</h3>
+            <br>
+            <h3>Thank you for choosing Filezz for your file uploading needs. We are committed to providing you with a reliable, private, and hassle-free experience. Your trust is our priority, and we will continue to innovate and enhance our services to meet your evolving needs.</h3>
+        </div>
+    </section>
+</body>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins",sans-serif;
+    }
+    body{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url('../static/abg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #head{
+        color: white;
+        font-weight: 600;
+        padding-top: 100px;
+    }
+    .about{
+        padding: 50px; 
+    }
+    .about h3{
+        align-items: center;
+        color: white;
+    }
+</style>
+</html>

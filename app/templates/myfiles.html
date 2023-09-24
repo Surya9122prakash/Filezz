@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Files</title>
+    <link rel="stylesheet" href="{% static 'mfstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'hstyle.css' %}">
+    <script src="https://kit.fontawesome.com/4e00c67d3f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a class="nav_logo">Filezz</a>
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="/" class="nav_link">Home</a>
+                    <a href="about" class="nav_link">About</a>
+                    <a href="contact" class="nav_link">Contact</a>
+                </li>
+            </ul>
+            <button class="button"><a href="logout">Logout</a></button>
+        </nav>
+    </header>
+    <section class="files">
+        <h2>My Files</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Filename</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in user_files %}
+                <tr>
+                    <td>{{ forloop.counter }}</td> 
+                    <td>{{ file.file }}</td> 
+                    <td>
+                        <form method="post" action="{% url 'delete_file' file.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="delete-button"><i class="fa-solid fa-trash fa-beat-fade fa-sm" style="color: #bb1626;"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</body>
+<style>
+    .header{
+        background-color: black;
+        height: 50px;
+    }
+    .files{
+        padding-top: 70px;
+    }
+</style>
+</html>

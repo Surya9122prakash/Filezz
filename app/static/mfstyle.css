@@ -1,0 +1,26 @@
+/* Apply styles to the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style table headers */
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Style table cells */
+td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Style the delete icon */
+.fa-trash {
+    cursor: pointer;
+}
+    

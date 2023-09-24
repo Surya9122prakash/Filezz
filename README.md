@@ -3,16 +3,22 @@ Filezz is a web application that allows users to securely upload and manage thei
 
 # Screenshots
 # Home Page
+![Screenshot (326)](https://github.com/Surya9122prakash/Filezz/assets/100427401/713ee10e-dfbf-4b63-adc3-c636ebd59ebb)
 
 # Login Page
+![Screenshot (324)](https://github.com/Surya9122prakash/Filezz/assets/100427401/c97f19fc-4676-4153-bab6-14acda500437)
 
 # Signup Page
+![Screenshot (325)](https://github.com/Surya9122prakash/Filezz/assets/100427401/39f941b6-7e13-4331-a622-439a86342e5a)
 
 # My Files Page
+![Screenshot (329)](https://github.com/Surya9122prakash/Filezz/assets/100427401/a69f9188-0a87-4f58-ac75-8abd73af815c)
 
 # About Page
+![Screenshot (327)](https://github.com/Surya9122prakash/Filezz/assets/100427401/096a580d-24d0-47ba-af09-ff38d47b38b1)
 
 # Contact Page
+![Screenshot (328)](https://github.com/Surya9122prakash/Filezz/assets/100427401/41935260-8443-4116-a3fb-688ed3da6b43)
 
 # Features
 1. User Authentication: Users can create accounts, log in, and log out.

@@ -44,5 +44,4 @@ To run this project locally, follow these steps:
 4. Manage your uploaded files on the "My Files" page.
 5. Explore the "About" and "Contact" pages for more information.
 
-# Contributors
-Surya Prakash
+
